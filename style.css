@@ -4,6 +4,12 @@
   Theme Author URI: https://childressagency.com
   Version: 1.0
 */
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+*/
 
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=21485af7-6e78-4823-a7f3-14932351178e");
 @font-face{
@@ -38,4 +44,99 @@
   src:url("Fonts/dbbb35ad-07f2-4848-a204-f4aa0f13a1ed.eot?#iefix") format("eot"),url("Fonts/b5a71150-9cc6-412c-a234-f1c2cbcd738f.woff2") format("woff2"),url("Fonts/604b74f3-0c1d-45e1-baf0-f3608ae91fce.woff") format("woff"),url("Fonts/ea67d4db-c657-4fd9-a406-19f659fb0cab.ttf") format("truetype"),url("Fonts/bec29477-8f0e-4b2e-bf59-c76b6c15f5f9.svg#bec29477-8f0e-4b2e-bf59-c76b6c15f5f9") format("svg");
   font-weight: 500;
   font-style: normal;
+}
+
+body{
+  font-family:ProximaNova, sans-serif;
+  font-weight:500;
+}
+
+#header-nav{
+  background-color:#000;
+  padding-top:15px;
+}
+#header-nav .navbar-header{
+  float:none;
+}
+.header-call>p{
+  color:#fff;
+  font-weight:300;
+  line-height:1em;
+  margin-bottom:0;
+}
+.header-call>a{
+  font-size:23px;
+  color:#3b7b2d;
+  line-height:1em;
+}
+.header-call>a:hover,
+.header-call>a:focus{
+  color:#fff;
+  text-decoration:none;
+}
+
+.nav>li>a{
+  color:#fff;
+  text-transform:uppercase;
+  font-weight:300;
+}
+.nav>li.active>a,
+.nav>li>a:hover,
+.nav>li>a:focus{
+  color:#3b7b2d;
+  font-weight:500;
+  background:transparent;
+  text-decoration:none;
+}
+.nav>li>a:after{
+  display:block;
+  content:attr(title);
+  font-weight:500;
+  height: 1px;
+  color:transparent;
+  overflow:hidden;
+  visibility:hidden;
+}
+
+.header-social{
+  text-align:right;
+}
+.header-social>a{
+  font-size:30px;
+  color:#fff;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.header-social>a+a{
+  margin-left:15px;
+}
+.header-social>a:hover,
+.header-social>a:focus{
+  color:#3b7b2d;
+}
+.navbar-toggle{
+  border-color:#fff;
+}
+.navbar-toggle .icon-bar{
+  background-color:#fff;
+}
+
+#hp-hero{
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:88vh;
+}
+
+
+@media (min-width:768px){
+  #navbar.navbar-collapse{
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+@media (max-height:991px){
+  #hp-hero{
+    height:90vh;
+  }
 }
