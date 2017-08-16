@@ -99,9 +99,34 @@ h1{
   margin-top:25px;
 }
 
+img.aligncenter,
+img.alignnone{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:25px auto;
+}
+img.alignleft{
+  display:block;
+  max-width:100%;
+  height:auto;
+  float:left;
+  margin:25px 25px 25px 0px;
+}
+img.alignright{
+  display:block;
+  max-width:100%;
+  height:auto;
+  float:right;
+  margin:25px 0px 25px 25px;
+}
+
 #header-nav{
   background-color:#000;
   padding-top:15px;
+  position:relative;
+  box-shadow:0px 3px 10px #000;
+  z-index:9999;
 }
 #header-nav .navbar-header{
   float:none;
@@ -308,6 +333,9 @@ section#empty{
   background-size:cover;
   background-position:center center;
 }
+#areasOfPractice>.container{
+  max-width:725px;
+}
 #areasOfPractice ul>li{
   color:#fff;
   font-size:18px;
@@ -350,6 +378,10 @@ section#empty{
   text-transform: uppercase;
   margin-top:0;
 }
+#areasOfPractice.about-page-areas{
+  position:relative;
+  box-shadow:0px 0px 10px 2px #000;
+}
 
 #about{
   background-repeat:no-repeat;
@@ -361,7 +393,7 @@ section#empty{
   height:100%;
 }
 #about .row .col-sm-6{
-  background-color:rgba(0,0,0,.5);
+  background-color:rgba(0,0,0,.7);
   padding-top:100px;
   padding-bottom:100px;
 }
@@ -391,6 +423,40 @@ section#empty{
 #about .btn-main{
   color:#fff;
   border-color:rgba(255,255,255,.5);
+}
+
+#aboutMission{
+  background-image:url(images/statue-handshake.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+}
+#aboutMission>.container{
+  max-width:725px;
+  height:100%;
+}
+#aboutMission .row .col-sm-7{
+  padding-top:60px;
+  padding-bottom:60px;
+  background-color:#fff;
+}
+#aboutMission .row .col-sm-5{
+  background-color:rgba(0,0,0,.7);
+  padding-top:60px;
+  vertical-align:top;
+}
+#aboutMission .mission-content h1{
+  font-size:36px;
+  font-weight:500;
+}
+#aboutMission .mission-content p{
+  line-height:1em;
+}
+#aboutMission .mission-statement>h2{
+  font-size:36px;
+  color:#ceac59;
+  text-transform:uppercase;
+  margin-top:0;
 }
 
 #inTheNews{
