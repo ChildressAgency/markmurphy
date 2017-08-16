@@ -585,17 +585,19 @@ footer #contact{
   font-size:16px;
   font-weight:300;
 }
-#contact .contact-info p.phone{
+#contact .contact-info p.phone-address{
   margin-top:40px;
+  line-height:1em;
 }
-#contact .contact-info p.phone>a{
-  font-size:27px;
+#contact .contact-info p.phone-address>a{
+  font-size:24px;
   color:#3b7b2d;
-  display:inline-block;
-  margin-left:15px;
+  display:block;
   font-weight:500;
+  line-height:1em;
+  text-transform:uppercase;
 }
-#contact .contact-info p.phone>a:hover{
+#contact .contact-info p.phone-address>a:hover{
   color:#ceac59;
   text-decoration:none;
 }
