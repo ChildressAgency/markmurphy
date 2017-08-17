@@ -243,16 +243,16 @@ img.alignright{
   margin-right:auto;
 }
 
-#testimonials{
+#hpTestimonials{
   text-align:center;
   padding-top:40px;
   padding-bottom:40px;
 }
-#testimonials h1{
+#hpTestimonials h1{
   position:relative;
   display:inline-block;
 }
-#testimonials h1:before{
+#hpTestimonials h1:before{
   content:"";
   position:absolute;
   height:70px;
@@ -845,6 +845,68 @@ input.wpcf7-acceptance:checked + .acceptance-label:before{
 }
 #detailedPractices ul>li>p{
   padding-left:16px;
+}
+
+#testimonials{
+  background-image:url(images/shaking-hands.jpg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  position:relative;
+  padding-top:40px;
+  padding-bottom:40px;
+  text-align:center;
+}
+#testimonials h1{
+  color:#fff;
+  text-align:center;
+  margin-bottom:40px;
+  position:relative;
+  display:inline-block;
+}
+#testimonials h1:before{
+  content:"";
+  position:absolute;
+  height:70px;
+  width:70px;
+  border:4px solid #3b7b2d;
+  top:-12px;
+  left:-48px;
+}
+.testimonials-content-overlay{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  background-color:rgba(0,0,0,.4);
+  z-index:1;
+}
+#testimonials>.container{
+  position:relative;
+  z-index:2;
+}
+.testimonial-block{
+  background-color:rgba(255,255,255,.8);
+  padding:15px;
+  margin-bottom:30px;
+  text-align:left;
+}
+.testimonial-header>h2{
+  font-size:18px;
+  text-transform:uppercase;
+  color:#3b7b2d;
+  margin-top:0;
+  margin-bottom:0;
+}
+.testimonial-header>p.author{
+  font-size:18px;
+  text-transform: uppercase;
+  color:#ceac59;
+}
+.testimonial-header>p.author>span{
+  font-size:14px;
+  color:#000;
+  text-transform:uppercase;
+  display:block; 
 }
 
 
