@@ -911,6 +911,17 @@ input.wpcf7-acceptance:checked + .acceptance-label:before{
 
 
 @media (max-width:767px){
+  .header-call{
+    text-align:center;
+    border-top:1px solid #ceac59;
+    border-bottom:1px solid #ceac59;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-bottom:15px;
+  }
+  .navbar-social{
+    text-align:center;
+  }
   #hp-hero{
     height:auto;
   }
