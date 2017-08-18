@@ -207,6 +207,7 @@ img.alignright{
 }
 
 #hp-hero{
+  background-image:url(images/courtroom-scales.jpg);
   background-repeat:no-repeat;
   background-size:cover;
   height:88vh;
@@ -303,6 +304,7 @@ img.alignright{
 }
 
 section#empty{
+  background-image:url(images/statue-of-justice.jpg);
   height:360px;
   background-repeat:no-repeat;
   background-size:cover;
@@ -329,6 +331,7 @@ section#empty{
 #areasOfPractice{
   padding-top:40px;
   padding-bottom:40px;
+  background-image:url(images/gavel.jpg);
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center center;
@@ -384,6 +387,7 @@ section#empty{
 }
 
 #about{
+  background-image:url(images/law-cases-books-writing.jpg);
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center center;
