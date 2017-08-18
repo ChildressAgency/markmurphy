@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Webfonts Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+	    body, textarea { font-family:Arial, Sans-Serif; line-height:1.6em; font-size:13px; }
+	    h1 { font-size:3em; }
+	    h2, h3 { color:#999; }
+	    .content { width:780px; margin: 20px auto 40px; }
+	    .demo { font-weight:bold; font-style:normal; color: #999 }
+	    .fontdisplay {font-size:2em;line-height:150%;margin: 10px 40px 0px 0px;}
+	    .guidelines { color:#333; }
+	    pre { padding:0 0 0 20px; }
+	    hr { border:0; border-bottom:1px solid #537094; margin:20px 0; }
+	    .link { color: #537094;text-decoration:none; font-weight:bold;}
+	    .uc {text-transform:uppercase}
+	    #para1{font-family:"Proxima Nova W01_n3";}
+#para2{font-family:"Proxima Nova W01_n5";}
+#para3{font-family:"Proxima Nova W01_n5";}
+
+@media all and (min-width: 0px) {
+#para1{font-family:'Proxima Nova W01'; font-weight: 300; font-style: normal;}
+#para2{font-family:'Proxima Nova W01'; font-weight: 500; font-style: normal;}
+#para3{font-family:'Proxima Nova W01'; font-weight: 500; font-style: normal;}
+
+}
+    </style>
+    <style type="text/css">
+    @font-face{
+        font-family:"Proxima Nova W01_n5";
+        src:url("Fonts/e06fb008-6276-432a-95ff-fd1116a1c7bb.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/e06fb008-6276-432a-95ff-fd1116a1c7bb.eot?#iefix");
+        src:url("Fonts/e06fb008-6276-432a-95ff-fd1116a1c7bb.eot?#iefix") format("eot"),url("Fonts/8a9b612c-9a9b-497e-94a0-741a6bf20b1a.woff2") format("woff2"),url("Fonts/0fcabbef-b1c3-4c1b-9f10-714d04750c32.woff") format("woff"),url("Fonts/c3d397b1-b795-4227-ae6c-8d8cc6a26c01.ttf") format("truetype"),url("Fonts/01632649-afd1-4e00-b348-a3980e1c359a.svg#01632649-afd1-4e00-b348-a3980e1c359a") format("svg");
+font-weight: 500;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"Proxima Nova W01_n3";
+        src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix");
+        src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot"),url("Fonts/317fd159-159d-4870-a01f-ef9d5a71d5b3.woff2") format("woff2"),url("Fonts/8e5dbeb3-4068-4196-83a4-c86fe35c8b65.woff") format("woff"),url("Fonts/f6c936c3-3828-4625-babb-e900c2afe00d.ttf") format("truetype"),url("Fonts/87761033-3af1-450a-8cdd-2321b6a595f9.svg#87761033-3af1-450a-8cdd-2321b6a595f9") format("svg");
+font-weight: 300;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"Proxima Nova W01_n5";
+        src:url("Fonts/dbbb35ad-07f2-4848-a204-f4aa0f13a1ed.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/dbbb35ad-07f2-4848-a204-f4aa0f13a1ed.eot?#iefix");
+        src:url("Fonts/dbbb35ad-07f2-4848-a204-f4aa0f13a1ed.eot?#iefix") format("eot"),url("Fonts/b5a71150-9cc6-412c-a234-f1c2cbcd738f.woff2") format("woff2"),url("Fonts/604b74f3-0c1d-45e1-baf0-f3608ae91fce.woff") format("woff"),url("Fonts/ea67d4db-c657-4fd9-a406-19f659fb0cab.ttf") format("truetype"),url("Fonts/bec29477-8f0e-4b2e-bf59-c76b6c15f5f9.svg#bec29477-8f0e-4b2e-bf59-c76b6c15f5f9") format("svg");
+font-weight: 500;
+font-style: normal;
+    }
+</style>
+<script type="text/javascript">
+var MTIProjectId='21485af7-6e78-4823-a7f3-14932351178e';
+ (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type='text/javascript';
+        mtiTracking.async='true';
+         mtiTracking.src='mtiFontTrackingCode.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+   })();
+</script>
+</head>
+<body>
+    <div class="content">
+        <h1 class="demo">Fonts.com Web fonts</h1>
+        <p style="margin-top: -10px; font-size: 1.5em; color: #666"><b>@font-face implementation instructions</b></p>
+        <p>The asynchronous script loads in the background allowing the other elements of your website to load first and undeterred.</p>
+        <hr />
+        <p class="uc">The fonts contained in this kit are:</p>
+        <div class="fontdisplay">
+            <div id="para1"> Proxima Nova W01 Condensed Regular </div>
+<div id="para2"> Proxima Nova W01 Condensed Bold </div>
+<div id="para3"> Proxima Nova W01 Condensed Medium </div>
+
+        </div>
+        <hr />
+        Click here for <a class="link uc" href="demo.htm">css only</a> web fonts implementation
+        <hr />
+        <div class="guidelines">
+            <h2>CSS Implementation Guidelines</h2>
+            <p>You and any third party web font hosting service are responsible for ensuring that the font software in the self-hosting kit, in its original format, can only be used on the Web Sites for which the self-hosting kit was downloaded and cannot be used or referenced by any other web site. This includes, but is not limited to installing adequate technical protection measures that restrict the use and/or access to the font software, for instance by utilizing JavaScript or access control mechanism for cross-origin resource sharing and protecting against use on web sites other than the Web Sites for which the self-hosting kit was downloaded by restricting domain access only to such Web Sites. You must also retain the pageview tracking code on any Web Site that you self-host. In the event this Agreement terminates for any reason, the font software included with the self-hosting kit must be deleted from the server and all copies must be destroyed or returned to Monotype Imaging.</p>
+            <p>View <a class="link" href="http://www.fonts.com/info/legal/eula/web-fonts" target="_blank">"WEB FONT SOFTWARE" LICENSE AGREEMENT</a></p>
+            <h2>Asynchronous Implementation (Requires JavaScript)</h2>
+            <p>Font file names have been obfuscated to protect the font software. You can identify font format based on file ending:</p>
+            <ul>
+                <li>1 - TrueType (ttf)</li>
+                <li>2 - Embedded OpenType (eot)</li>
+                <li>3 - Web Open Font Format (woff)</li>
+                <li>4 - Web Open Font Format version 2 (woff2)</li>
+                <li>5 - Scalable Vector Graphics (svg)</li>
+                
+            </ul>
+            <p class="uc" style="margin: 20px 0px -20px;"><b>Copy and paste following code in head section of the page</b></p>
+            <hr />
+            <textarea style="width: 830px; height: 350px; border: 1 #fff solid; background-color: #fcfcfc;"><style type="text/css">
+    @font-face{
+        font-family:"Proxima Nova W01_n5";
+        src:url("Fonts/e06fb008-6276-432a-95ff-fd1116a1c7bb.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/e06fb008-6276-432a-95ff-fd1116a1c7bb.eot?#iefix");
+        src:url("Fonts/e06fb008-6276-432a-95ff-fd1116a1c7bb.eot?#iefix") format("eot"),url("Fonts/8a9b612c-9a9b-497e-94a0-741a6bf20b1a.woff2") format("woff2"),url("Fonts/0fcabbef-b1c3-4c1b-9f10-714d04750c32.woff") format("woff"),url("Fonts/c3d397b1-b795-4227-ae6c-8d8cc6a26c01.ttf") format("truetype"),url("Fonts/01632649-afd1-4e00-b348-a3980e1c359a.svg#01632649-afd1-4e00-b348-a3980e1c359a") format("svg");
+font-weight: 500;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"Proxima Nova W01_n3";
+        src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix");
+        src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot"),url("Fonts/317fd159-159d-4870-a01f-ef9d5a71d5b3.woff2") format("woff2"),url("Fonts/8e5dbeb3-4068-4196-83a4-c86fe35c8b65.woff") format("woff"),url("Fonts/f6c936c3-3828-4625-babb-e900c2afe00d.ttf") format("truetype"),url("Fonts/87761033-3af1-450a-8cdd-2321b6a595f9.svg#87761033-3af1-450a-8cdd-2321b6a595f9") format("svg");
+font-weight: 300;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"Proxima Nova W01_n5";
+        src:url("Fonts/dbbb35ad-07f2-4848-a204-f4aa0f13a1ed.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/dbbb35ad-07f2-4848-a204-f4aa0f13a1ed.eot?#iefix");
+        src:url("Fonts/dbbb35ad-07f2-4848-a204-f4aa0f13a1ed.eot?#iefix") format("eot"),url("Fonts/b5a71150-9cc6-412c-a234-f1c2cbcd738f.woff2") format("woff2"),url("Fonts/604b74f3-0c1d-45e1-baf0-f3608ae91fce.woff") format("woff"),url("Fonts/ea67d4db-c657-4fd9-a406-19f659fb0cab.ttf") format("truetype"),url("Fonts/bec29477-8f0e-4b2e-bf59-c76b6c15f5f9.svg#bec29477-8f0e-4b2e-bf59-c76b6c15f5f9") format("svg");
+font-weight: 500;
+font-style: normal;
+    }
+</style>
+<script type="text/javascript">
+var MTIProjectId='21485af7-6e78-4823-a7f3-14932351178e';
+ (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type='text/javascript';
+        mtiTracking.async='true';
+         mtiTracking.src='mtiFontTrackingCode.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+   })();
+</script></textarea>
+            <h3>Licensing information should be included within the CSS</h3>
+<pre>/*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+*/</pre>
+        </div>
+    </div>
+</body>
+</html>

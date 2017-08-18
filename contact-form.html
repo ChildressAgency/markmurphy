@@ -1,0 +1,45 @@
+<div class="contact-form">
+  <div class="form-group">
+    <label for="your-name" class="sr-only">First & Last Name</label>
+    [text* your-name id:your-name class:form-control placeholder "FIRST & LAST NAME*"]
+  </div>
+  <div class="form-group">
+    <label for="your-email" class="sr-only">Email</label>
+    [email* your-email name:your-email class:form-control placeholder "EMAIL*"]
+  </div>
+  <div class="form-group">
+    <label for="mobile-phone" class="sr-only">Mobile Phone</label>
+    [text mobile-phone id:mobile-phone class:form-control placeholder "MOBILE PHONE"]
+  </div>
+  <div class="form-group">
+    <label for="home-phone" class="sr-only">Home Phone</label>
+    [text home-phone id:home-phone class:form-control placeholder "HOME PHONE"]
+  </div>
+  <div class="form-group">
+    <label for="preferred-phone" class="control-label">PLEASE SELECT PREFERRED CONTACT NUMBER:</label>
+    [radio preferred-phone id:preferred-phone use_label_element "MOBILE" "HOME"]
+  </div>
+  <div class="form-group">
+    <label for="contact-time" class="sr-only">Preferred contact time</label>
+    [text contact-time id:contact-time class:form-control placeholder "PREFERRED CONTACT TIME"]
+  </div>
+  <div class="form-group">
+    <label for="jurisdiction" class="sr-only">Jurisdiction</label>
+    [text jurisdiction id:jurisdiction class:form-control placeholder "JURISDICTION"]
+  </div>
+  <div class="form-group">
+    <label for="question" class="control-label">HOW CAN WE HELP YOU?<span>(briefly describe your legal issue)</span></label>
+    [textarea question x4 id:question class:form-control]
+  </div>
+  <div class="form-group">
+    <p class="disclaimer">The use of this form for communication with the firm or any individual member of The Law Office of Mark A. Murphy does not establish an attorney-client relationship. Confidential or time-sensitive information should not be sent through the internet.</p>
+    <label>
+      <input type="checkbox" name="understand" class="wpcf7-form-control wpcf7-acceptance" value="1" aria-invalid="false" />
+      <span class="acceptance-label">I HAVE READ AND UNDERSTAND THE DISCLAIMER</span>
+    </label>
+  </div>
+  <div class="form-group">
+    [submit class:btn-main class:btn-alt "SUBMIT"]
+    <div class="clearfix"></div>
+  </div>
+</div>
