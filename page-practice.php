@@ -50,7 +50,7 @@
                     <h2><?php echo $area['area_of_practice_title']; ?></h2>
                     <?php echo $area['area_of_practice_description']; ?>
                   </div>
-                  <?php if($p==$half_total_areas){ echo '</div><div class="col-sm-6"'; } ?>
+                  <?php if($p==$half_total_areas){ echo '</div><div class="col-sm-6">'; } ?>
                 <?php $p++; endforeach; ?>
             </div>
           </div>

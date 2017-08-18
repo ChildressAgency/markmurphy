@@ -280,6 +280,12 @@ img.alignright{
   text-align:right;
   text-transform:uppercase;
 }
+#testimonialCarousel .testimonial-callout .author>span{
+  font-size:14px;
+  color:#000;
+  text-transform:uppercase;
+  display:block;   
+}
 #testimonialCarousel .testimonial{
   text-align:left;
 }
@@ -686,6 +692,13 @@ input.wpcf7-acceptance{
 .wpcf7-radio input[type="radio"]:checked + .wpcf7-list-item-label:before,
 input.wpcf7-acceptance:checked + .acceptance-label:before{
   background-position:0px 0px;
+}
+input.wpcf7-submit:disabled{
+  background-color:rgba(230,230,230,.4);
+}
+
+.wpcf7-response-output{
+  color:#fff;
 }
 
 .control-label{

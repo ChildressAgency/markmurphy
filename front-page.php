@@ -88,7 +88,7 @@
           if(have_rows('areas_of_practice', $practice_page_id)): ?>
             <ul class="list-unstyled">
               <?php while(have_rows('areas_of_practice', $practice_page_id)): the_row(); ?>
-                <li><?php the_sub_field('title_of_practice'); ?></li>
+                <li><?php the_sub_field('area_of_practice_title'); ?></li>
               <?php endwhile; ?>
             </ul>
         <?php endif; ?>
@@ -110,7 +110,7 @@
           <?php if(have_rows('detailed_practices', $practice_page_id)): ?>
             <ul class="list-unstyled">
               <?php while(have_rows('detailed_practices', $practice_page_id)): the_row(); ?>
-                <li><?php the_sub_field('detailed_practice'); ?></li>
+                <li><?php the_sub_field('detailed_practice_title'); ?></li>
               <?php endwhile; ?>
             </ul>
           <?php endif; ?>
@@ -136,8 +136,9 @@
         <?php 
           $news_page = get_page_by_path('news');
           $news_page_id = $news_page->ID;
-          if(have_rows('news_items', $news_page_id)): $n==0; while(have_rows('news_items', $news_page_id)): the_row(); ?>
-            <a href="<?php the_sub_field('article_link'); ?>" class="news-summary">
+          $n=0;
+          if(have_rows('news_items', $news_page_id)): while(have_rows('news_items', $news_page_id)): the_row(); ?>
+            <a href="<?php the_sub_field('article_link'); ?>" class="news-summary" target="_blank">
               <p class="news-date"><?php the_sub_field('article_date'); ?></p>
               <h2><?php the_sub_field('article_title'); ?></h2>
               <p class="news-source"><?php the_sub_field('article_source'); ?></p>

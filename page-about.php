@@ -27,10 +27,13 @@
         <div class="clearfix visible-xs-block"></div>
       </div>
       <div class="col-sm-5 col-sm-height col-sm-pull-7">
-        <?php if(have_rows('areas_of_practice')): ?>
+        <?php 
+          $practice_page = get_page_by_path('practice');
+          $practice_page_id = $practice_page->ID;
+          if(have_rows('areas_of_practice', $practice_page_id)): ?>
           <ul class="list-unstyled">
-            <?php while(have_rows('areas_of_practice')): the_row(); ?>
-              <li><?php the_sub_field('title_of_practice'); ?></li>
+            <?php while(have_rows('areas_of_practice', $practice_page_id)): the_row(); ?>
+              <li><?php the_sub_field('area_of_practice_title'); ?></li>
             <?php endwhile; ?>
           </ul>
         <?php endif; ?>

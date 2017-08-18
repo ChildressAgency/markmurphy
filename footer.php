@@ -1,7 +1,5 @@
     <footer>
-      <?php if(!is_page('contact')){
-        get_template_part('contact', 'section');
-      } ?>
+      <?php get_template_part('contact-section'); ?>
       <nav id="footer-nav">
         <div class="container-fluid">
           <div class="row">

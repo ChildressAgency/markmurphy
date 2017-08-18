@@ -306,7 +306,7 @@ function markmurphy_fallback_header_menu(){ ?>
   </div>
 <?php }
 
-function markmuphy_fallback_footer_menu(){ ?>
+function markmurphy_fallback_footer_menu(){ ?>
   <ul class="nav nav-justified">
     <li><a href="<?php echo home_url(); ?>">Home</a></li>
     <li><a href="<?php echo home_url('testimonials'); ?>">Testimonials</a></li>

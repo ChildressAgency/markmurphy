@@ -40,10 +40,19 @@
             </div>
           </div>
           <div class="col-sm-3 col-md-2 hidden-xs">
+            <?php
+              $linkedin = get_field('linkedin', 'option'); 
+              $facebook = get_field('facebook', 'option');
+              $twitter = get_field('twitter', 'option');
+            ?>
             <div class="navbar-social">
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook-square"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
+              <?php if($linkedin): ?>
+                <a href="<?php echo $linkedin; ?>"><i class="fa fa-linkedin"></i></a>
+              <?php endif; if($facebook): ?>
+                <a href="<?php echo $facebook; ?>"><i class="fa fa-facebook-square"></i></a>
+              <?php endif; if($twitter): ?>
+                <a href="<?php echo $twitter; ?>"><i class="fa fa-twitter"></i></a>
+              <?php endif; ?>
             </div>
           </div>
         </div>
@@ -54,14 +63,14 @@
           $items_wrap_phone .= '</div></li>';
 
           $items_wrap_social = '<li class="vixible-xs-block"><div class="navbar-social">';
-          if(get_field('linkedin', 'option')){
-            $items_wrap_social .= '<a href="' . get_field('linkedin', 'option') . '"><i class="fa fa-linkedin"></i></a>';
+          if($linkedin){
+            $items_wrap_social .= '<a href="' . $linkedin . '"><i class="fa fa-linkedin"></i></a>';
           }
-          if(get_field('facebook', 'option')){
-            $items_wrap_social .= '<a href="' . get_field('facebook', 'option') . '"><i class="fa fa-facebook-square"></i></a>';
+          if($facebook){
+            $items_wrap_social .= '<a href="' . $facebook . '"><i class="fa fa-facebook-square"></i></a>';
           }
-          if(get_field('twitter', 'option')){
-            $items_wrap_social .= '<a href="' . get_field('twitter', 'option') . '"><i class="fa fa-twitter"></i></a>';
+          if($twitter){
+            $items_wrap_social .= '<a href="' . $twitter . '"><i class="fa fa-twitter"></i></a>';
           }
           $items_wrap_social .= '</div></li>';
 
