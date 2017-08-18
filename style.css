@@ -867,7 +867,8 @@ input.wpcf7-submit:disabled{
 #testimonials{
   background-image:url(images/shaking-hands.jpg);
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size:cover;
+  background-attachment:fixed;
   position:relative;
   padding-top:40px;
   padding-bottom:40px;
