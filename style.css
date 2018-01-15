@@ -451,6 +451,13 @@ section#empty{
   padding-left:15px;
   box-shadow:-4px 0px 0px -2px #3b7b2d;
 }
+#about .detailed-practice-list h2{
+  color:#ceac59;
+  font-weight:500;
+  text-transform:uppercase;
+  margin-top:0;
+  font-size:32px;
+}
 #about .btn-main{
   color:#fff;
   border-color:rgba(255,255,255,.5);
@@ -1021,7 +1028,6 @@ input.wpcf7-submit:disabled{
   }
   #about .detailed-practice-list{
     padding-left:50px;
-    padding-top:100px;
     margin-bottom:80px;
   }
   #inTheNews .container-fluid{

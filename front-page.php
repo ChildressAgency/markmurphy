@@ -99,7 +99,7 @@
                 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
               <?php endwhile; ?>
             </ul>
-        <?php endif; ?>
+        <?php endif; wp_reset_postdata(); ?>
       </div>
     </div>
   </div>
@@ -115,13 +115,7 @@
       </div>
       <div class="col-sm-6 col-sm-height">
         <div class="detailed-practice-list">
-          <?php if(have_rows('detailed_practices', $practice_page_id)): ?>
-            <ul class="list-unstyled">
-              <?php while(have_rows('detailed_practices', $practice_page_id)): the_row(); ?>
-                <li><?php the_sub_field('detailed_practice_title'); ?></li>
-              <?php endwhile; ?>
-            </ul>
-          <?php endif; ?>
+          <h2><?php the_field('about_statement_right_side'); ?></h2>
         </div>
         <div class="btns-centered">
           <a href="<?php echo home_url('about'); ?>" class="btn-main">Read More</a>
