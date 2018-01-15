@@ -80,7 +80,11 @@
           <h1>Criminal Defense</h1>
           <h2>Areas of Practice</h2>
         </div>
-        <div class="clearfix visible-xs-block"></div>
+        <div class="clearfix"></div>
+        <div class="areas-of-practice-description">
+          <p><?php the_field('areas_of_practice_section_description'); ?></p>
+          <a href="<?php the_field('areas_of_practice_section_link'); ?>" class="btn-main"><?php the_field('areas_of_practice_section_link_text'); ?></a>
+        </div>
       </div>
       <div class="col-sm-5 col-sm-height col-sm-pull-7">
         <?php 

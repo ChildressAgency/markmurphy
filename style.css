@@ -398,6 +398,20 @@ section#empty{
   position:relative;
   box-shadow:0px 0px 10px 2px #000;
 }
+.areas-of-practice-description{
+  text-align:center;
+  max-width:200px;
+  margin:30px auto 0px;
+}
+.areas-of-practice-description p{
+  color:#fff;
+  font-weight:300;
+  font-size:18px;
+}
+.areas-of-practice-description .btn-main{
+  color:#fff;
+  border-color:rgba(255,255,255,.5);
+}
 
 #about{
   background-image:url(images/law-cases-books-writing.jpg);
