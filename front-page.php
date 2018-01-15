@@ -61,8 +61,9 @@
         <h1>How we will represent you</h1>
         <?php the_field('how_will_represent_content'); ?>
         <div class="btns-centered">
-          <a href="<?php echo home_url('about'); ?>" class="btn-main">Read More</a>
+          <a href="<?php echo home_url('about'); ?>" class="btn-main">About</a>
           <a href="<?php echo home_url('practice'); ?>" class="btn-main">Practices</a>
+          <a href="<?php echo home_url('contact'); ?>" class="btn-main">Contact</a>
         </div>
       </div>
       <div class="col-sm-5 hidden-xs col-sm-height">
@@ -83,12 +84,15 @@
       </div>
       <div class="col-sm-5 col-sm-height col-sm-pull-7">
         <?php 
-          $practice_page = get_page_by_path('practice');
-          $practice_page_id = $practice_page->ID;
-          if(have_rows('areas_of_practice', $practice_page_id)): ?>
+          $practices = new WP_Query(array(
+            'post_type' => 'charges',
+            'posts_per_page' => -1
+          ));
+          
+          if($practices->have_posts()): ?>
             <ul class="list-unstyled">
-              <?php while(have_rows('areas_of_practice', $practice_page_id)): the_row(); ?>
-                <li><?php the_sub_field('area_of_practice_title'); ?></li>
+              <?php while($practices->have_posts()): $practices->the_post(); ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
               <?php endwhile; ?>
             </ul>
         <?php endif; ?>
