@@ -61,8 +61,9 @@
         <h1>How we will represent you</h1>
         <?php the_field('how_will_represent_content'); ?>
         <div class="btns-centered">
-          <a href="<?php echo home_url('about'); ?>" class="btn-main">Read More</a>
+          <a href="<?php echo home_url('about'); ?>" class="btn-main">About</a>
           <a href="<?php echo home_url('practice'); ?>" class="btn-main">Practices</a>
+          <a href="<?php echo home_url('contact'); ?>" class="btn-main">Contact</a>
         </div>
       </div>
       <div class="col-sm-5 hidden-xs col-sm-height">
@@ -79,19 +80,26 @@
           <h1>Criminal Defense</h1>
           <h2>Areas of Practice</h2>
         </div>
-        <div class="clearfix visible-xs-block"></div>
+        <div class="clearfix"></div>
+        <div class="areas-of-practice-description">
+          <p><?php the_field('areas_of_practice_section_description'); ?></p>
+          <a href="<?php the_field('areas_of_practice_section_link'); ?>" class="btn-main"><?php the_field('areas_of_practice_section_link_text'); ?></a>
+        </div>
       </div>
       <div class="col-sm-5 col-sm-height col-sm-pull-7">
         <?php 
-          $practice_page = get_page_by_path('practice');
-          $practice_page_id = $practice_page->ID;
-          if(have_rows('areas_of_practice', $practice_page_id)): ?>
+          $practices = new WP_Query(array(
+            'post_type' => 'charges',
+            'posts_per_page' => -1
+          ));
+          
+          if($practices->have_posts()): ?>
             <ul class="list-unstyled">
-              <?php while(have_rows('areas_of_practice', $practice_page_id)): the_row(); ?>
-                <li><?php the_sub_field('area_of_practice_title'); ?></li>
+              <?php while($practices->have_posts()): $practices->the_post(); ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
               <?php endwhile; ?>
             </ul>
-        <?php endif; ?>
+        <?php endif; wp_reset_postdata(); ?>
       </div>
     </div>
   </div>
@@ -107,13 +115,7 @@
       </div>
       <div class="col-sm-6 col-sm-height">
         <div class="detailed-practice-list">
-          <?php if(have_rows('detailed_practices', $practice_page_id)): ?>
-            <ul class="list-unstyled">
-              <?php while(have_rows('detailed_practices', $practice_page_id)): the_row(); ?>
-                <li><?php the_sub_field('detailed_practice_title'); ?></li>
-              <?php endwhile; ?>
-            </ul>
-          <?php endif; ?>
+          <h2><?php the_field('about_statement_right_side'); ?></h2>
         </div>
         <div class="btns-centered">
           <a href="<?php echo home_url('about'); ?>" class="btn-main">Read More</a>

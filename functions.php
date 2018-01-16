@@ -57,6 +57,8 @@ function markmurphy_styles(){
   wp_enqueue_style('markmurphy');
 }
 
+add_theme_support('post-thumbnails');
+
 register_nav_menu( 'header-nav', 'Header Navigation' );
 register_nav_menu('footer-nav', 'Footer Navigation');
 /**
@@ -264,6 +266,25 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 			echo $fb_output;
 		}
 	}
+}
+
+add_action('init', 'markmurphy_create_post_type');
+function markmurphy_create_post_type(){
+  $charges_labels = array(
+    'name' => 'Charges',
+    'singular_name' => 'charges',
+    'menu_name' => 'Charges',
+    'add_new_item' => 'Add New Charge',
+    'search_items' => 'Search Charges'
+  );
+  $charges_args = array(
+    'labels' => $charges_labels,
+    'public' => true,
+    'menu_position' => 5,
+    'supports' => array('title', 'author', 'editor', 'revisions', 'thumbnail'),
+    'menu_icon' => 'dashicons-shield-alt'
+  );
+  register_post_type('charges', $charges_args);
 }
 
 if(function_exists('acf_add_options_page')){
