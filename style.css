@@ -812,7 +812,7 @@ input.wpcf7-submit:disabled{
 .charge-type>h3{
   font-size:18px;
   text-transform:uppercase;
-  margin-bottom:10px;
+  margin-bottom:0px;
   position:relative;
 }
 .charge-type>h3:before{
