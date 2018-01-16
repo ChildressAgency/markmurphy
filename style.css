@@ -1008,6 +1008,21 @@ input.wpcf7-submit:disabled{
   text-transform:uppercase;
   display:block; 
 }
+.featured-testimonial{
+  background-color:#fff;
+  padding:20px;
+  margin-bottom:30px;
+}
+.featured-testimonial p{
+  text-align:left;
+}
+.featured-testimonial .testimonial-header,
+.featured-testimonial p.author{
+  text-align:right;
+}
+.featured-testimonial .testimonial-header>h2{
+  font-size:24px;
+}
 
 #chargesContent{
   padding-top:40px;

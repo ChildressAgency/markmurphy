@@ -2,6 +2,21 @@
 <section id="testimonials">
   <div class="container">
     <h1>Testimonials</h1>
+    <?php if(get_field('featured_testimonial')): ?>
+      <div class="featured-testimonial">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="testimonial-header">
+              <h2><?php the_field('featured_testimonial_callout'); ?></h2>
+              <p class="author">- <?php the_field('featured_testimonial_author'); ?></p>
+            </div>
+          </div>
+          <div class="col-sm-7">
+            <?php the_field('featured_testimonial'); ?>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
     <div class="row">
       <div class="col-sm-5">
         <?php
