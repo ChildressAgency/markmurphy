@@ -769,17 +769,70 @@ input.wpcf7-submit:disabled{
   background-image:url(images/hands-scale.jpg);
   background-repeat:no-repeat;
   background-size:cover;
+  background-position:right top;
 }
 #practiceMain>.container{
   max-width:725px;
 }
+/*
 #practiceMain .row .col-sm-4{
   background-color:rgba(0,0,0,.7);
   vertical-align:bottom;
-}
+}*/
 #practiceMain .row .col-sm-8{
   background-color:#fff;
+  padding-top:40px;
+  padding-bottom:80px;
 }
+#criminalDefense,
+#typesOfCharges{
+  max-width:650px;
+  margin-right:0;
+  margin-left:auto;
+}
+#criminalDefense>h1{
+  font-size:37px;
+  font-weight:500;
+  position:relative;
+}
+#criminalDefense>h1:before{
+  content:"";
+  position:absolute;
+  height:70px;
+  width:70px;
+  border:4px solid rgba(230,230,230,.4);
+  top:-15px;
+  left:-28px;
+}
+#typesOfCharges>h2{
+  font-size:21px;
+  color:#3b7b2d;
+  text-transform:uppercase;
+}
+.charge-type>h3{
+  font-size:18px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+  position:relative;
+}
+.charge-type>h3:before{
+  content:"";
+  position:absolute;
+  height:15px;
+  width:15px;
+  border:2px solid rgba(206,172,89,.4);
+  top:-3px;
+  left:-8px;
+}
+.charge-type ul{
+  color:#ceac59;
+  font-weight:300;
+  margin-bottom:0;
+}
+.charge-type>a{
+  color:#000;
+}
+
 #practiceMain .detailed-practice-list>ul{
   margin-bottom:40px;
 }
@@ -841,11 +894,12 @@ input.wpcf7-submit:disabled{
 }
 .practice-areas-descriptions{
   max-width:700px;
-  margin-left:auto;
-  margin-right:0;
+  margin-left:0;
+  margin-right:auto;
   color:#fff;
   padding-top:40px;
   padding-bottom:40px;
+  text-align:right;
 }
 .practice-areas-descriptions>h1{
   color:#fff;
@@ -865,7 +919,7 @@ input.wpcf7-submit:disabled{
   width:35px;
   border:2px solid rgba(206,172,89,.4);
   top:-4px;
-  left:-17px;
+  right:-17px;
 }
 .practice-area-description>p{
   font-weight:300;
