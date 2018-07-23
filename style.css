@@ -784,11 +784,16 @@ input.wpcf7-submit:disabled{
   padding-top:40px;
   padding-bottom:80px;
 }
-#criminalDefense,
 #typesOfCharges{
   max-width:650px;
   margin-right:0;
   margin-left:auto;
+}
+#criminalDefense{
+  max-width:650px;
+  margin-top:40px;
+  color:#fff;
+  font-weight:300;
 }
 #criminalDefense>h1{
   font-size:37px;
