@@ -271,11 +271,11 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 add_action('init', 'markmurphy_create_post_type');
 function markmurphy_create_post_type(){
   $charges_labels = array(
-    'name' => 'Charges',
-    'singular_name' => 'charges',
-    'menu_name' => 'Charges',
-    'add_new_item' => 'Add New Charge',
-    'search_items' => 'Search Charges'
+    'name' => 'Areas of Practice',
+    'singular_name' => 'Area of Practice',
+    'menu_name' => 'Areas of Practice',
+    'add_new_item' => 'Add New Practice Area',
+    'search_items' => 'Search Practice Areas'
   );
   $charges_args = array(
     'labels' => $charges_labels,
@@ -284,7 +284,7 @@ function markmurphy_create_post_type(){
     'supports' => array('title', 'author', 'editor', 'revisions', 'thumbnail'),
     'menu_icon' => 'dashicons-shield-alt'
   );
-  register_post_type('charges', $charges_args);
+  register_post_type('practice_areas', $charges_args);
 }
 
 if(function_exists('acf_add_options_page')){
