@@ -15,7 +15,7 @@
                 <?php $i=1; while(have_rows('news_items')): the_row(); ?>
                   <?php if($i%6==0){ echo '</div><div class="item">'; } ?>
                   <a href="<?php the_sub_field('article_link'); ?>" class="news-summary" target="_blank">
-                    <p class="news-date"><?php the_sub_field('article_date'); ?></p>
+                    <p class="news-date"><?php //the_sub_field('article_date'); ?></p>
                     <h2><?php the_sub_field('article_title'); ?></h2>
                     <p class="news-source"><?php the_sub_field('article_source'); ?></p>
                   </a>
