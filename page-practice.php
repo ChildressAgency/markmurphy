@@ -23,8 +23,9 @@
                   'post_status' => 'publish'
                 ));
 
-                $practices_count = wp_count_posts($practices)->publish;
-                $half_practices = $practices_count/2;
+                $practices_count = $practices->post_count;
+                $half_practices = round($practices_count/2);
+                //var_dump($half_practices);
                 $p=1;
 
                 if($practices->have_posts()): while($practices->have_posts()): $practices->the_post(); ?>
