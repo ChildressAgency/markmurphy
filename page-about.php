@@ -28,15 +28,19 @@
       </div>
       <div class="col-sm-5 col-sm-height col-sm-pull-7">
         <?php 
-          $practice_page = get_page_by_path('practice');
-          $practice_page_id = $practice_page->ID;
-          if(have_rows('areas_of_practice', $practice_page_id)): ?>
-          <ul class="list-unstyled">
-            <?php while(have_rows('areas_of_practice', $practice_page_id)): the_row(); ?>
-              <li><?php the_sub_field('area_of_practice_title'); ?></li>
+          $practices = new WP_Query(array(
+            'post_type' => 'practice_areas',
+            'posts_per_page' => -1,
+            'post_status' => 'publish'
+          ));
+
+          if($practices->have_posts()): ?>
+            <ul class="list-unstyled">
+              <?php while($practices->have_posts()): $practices->the_post(); ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
             <?php endwhile; ?>
           </ul>
-        <?php endif; ?>
+        <?php endif; wp_reset_postdata(); ?>
       </div>
     </div>
   </div>

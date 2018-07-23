@@ -89,8 +89,9 @@
       <div class="col-sm-5 col-sm-height col-sm-pull-7">
         <?php 
           $practices = new WP_Query(array(
-            'post_type' => 'charges',
-            'posts_per_page' => -1
+            'post_type' => 'practice_areas',
+            'posts_per_page' => -1,
+            'post_status' => 'publish'
           ));
           
           if($practices->have_posts()): ?>
