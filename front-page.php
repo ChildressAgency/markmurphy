@@ -89,6 +89,8 @@
       <div class="col-sm-5 col-sm-height col-sm-pull-7">
         <?php 
           $practices = new WP_Query(array(
+            //'post_type' => 'charges',
+            //'posts_per_page' => -1
             'post_type' => 'practice_areas',
             'posts_per_page' => -1,
             'post_status' => 'publish'
@@ -141,8 +143,10 @@
           $news_page_id = $news_page->ID;
           $n=0;
           if(have_rows('news_items', $news_page_id)): while(have_rows('news_items', $news_page_id)): the_row(); ?>
-            <a href="<?php the_sub_field('article_link'); ?>" class="news-summary" target="_blank">
-              <p class="news-date"><?php the_sub_field('article_date'); ?></p>
+            <a <?php echo get_sub_field('article_link') ? 'href="' . get_sub_field('article_link') . '"' : ''; ?> class="news-summary" target="_blank">
+              <?php if(get_sub_field('article_date')): ?>
+                <p class="news-date"><?php the_sub_field('article_date'); ?></p>
+              <?php endif; ?>
               <h2><?php the_sub_field('article_title'); ?></h2>
               <p class="news-source"><?php the_sub_field('article_source'); ?></p>
             </a>
