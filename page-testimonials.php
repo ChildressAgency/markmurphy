@@ -22,7 +22,7 @@
         <?php
           $testimonials = get_field('testimonials');
           $total_testimonials = count($testimonials);
-          $half_testimonials = $total_testimonials/2;
+          $half_testimonials = ceil($total_testimonials/2);
           $t=1;
 
           foreach($testimonials as $testimonial): ?>
