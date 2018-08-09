@@ -28,6 +28,7 @@
                 <p>CALL TODAY FOR A FREE CONSULTATION ON CRIMINAL MATTERS</p>
               <?php endif; ?>
               <a href="tel:<?php the_field('phone_number', 'option'); ?>"><?php the_field('phone_number', 'option'); ?></a>
+              <a href="tel:<?php the_field('phone_number', 'option'); ?>" class="btn-main btn-alt">Call Now</a>
             </div>
           </div>
           <div class="col-sm-6 col-md-8">
