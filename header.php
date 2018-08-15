@@ -24,9 +24,7 @@
         <div class="row">
           <div class="col-sm-3 col-md-2 hidden-xs">
             <div class="header-call">
-              <?php if(!is_front_page()): ?>
-                <p>CALL TODAY FOR A FREE CONSULTATION ON CRIMINAL MATTERS</p>
-              <?php endif; ?>
+              <p>CALL NOW FOR CRIMINAL MATTERS</p>
               <a href="tel:<?php the_field('phone_number', 'option'); ?>"><?php the_field('phone_number', 'option'); ?></a>
               <a href="tel:<?php the_field('phone_number', 'option'); ?>" class="btn-main btn-alt">Call Now</a>
             </div>
