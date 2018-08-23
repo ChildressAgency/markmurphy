@@ -24,7 +24,9 @@
         <div class="row">
           <div class="col-sm-3 col-md-2 hidden-xs">
             <div class="header-call">
-              <p>CALL NOW FOR CRIMINAL MATTERS</p>
+              <?php if(get_field('header_call_now_message', 'option')): ?>
+                <p><?php the_field('header_call_now_message', 'option'); ?></p>
+              <?php endif; ?>
               <a href="tel:<?php the_field('phone_number', 'option'); ?>"><?php the_field('phone_number', 'option'); ?></a>
               <a href="tel:<?php the_field('phone_number', 'option'); ?>" class="btn-main btn-alt">Call Now</a>
             </div>
