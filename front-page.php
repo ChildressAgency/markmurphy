@@ -7,6 +7,9 @@
       <a href="<?php echo home_url('about'); ?>" class="btn-main btn-alt btn-big">Personal Approach</a>
       <a href="<?php echo home_url('contact'); ?>" class="btn-main btn-alt btn-big">Contact Us</a>
       <a href="tel:<?php echo get_field('phone_number', 'option'); ?>" class="btn-main btn-alt btn-big">Call Now</a>
+      <?php if(get_field('hero_caption')): ?>
+        <?php the_field('hero_caption'); ?>
+      <?php endif; ?>
     </div>
   </div>
 </section>
